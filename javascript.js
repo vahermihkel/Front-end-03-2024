@@ -123,3 +123,6 @@ if (täisealine) {
 } else {
   console.log("On alaealine")
 }
+
+// 9.00-12.15 - Irina
+// 17.30-20.45 - Evelin
