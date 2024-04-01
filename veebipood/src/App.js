@@ -1,6 +1,13 @@
 //import logo from './logo.svg';
 import './App.css';
 import { Link, Route, Routes } from "react-router-dom";
+import Avaleht from './pages/Avaleht';
+import Kinkekaart from './pages/Kinkekaart';
+import Esindused from './pages/Esindused';
+import Ariklient from './pages/Ariklient';
+import Ostukorv from './pages/Ostukorv';
+import Seaded from './pages/Seaded';
+import LisaToode from './pages/LisaToode';
 
 function App() {
   return (
@@ -27,14 +34,24 @@ function App() {
         <button className="nupp">Ostukorv</button>
       </Link>
 
+      <Link to="seaded">
+        <button className="nupp">Seaded</button>
+      </Link>
+
+      <Link to="lisa-toode">
+        <button className="nupp">Lisa toode</button>
+      </Link>
+
 
 {/* kui ollakse localhost:3000/osta-kinkekaart lehel, siis näidatakse sisu (HTML): <div>Olen K</div> */}
       <Routes>
-        <Route path="avaleht" element={ <div>Olen avalehel</div> }></Route>
-        <Route path="osta-kinkekaart" element={ <div>Olen K</div> }></Route>
-        <Route path="esindused" element={ <div>Olen E</div> }></Route>
-        <Route path="arikliendile" element={ <div>Olen Ä</div> }></Route>
-        <Route path="ostukorv" element={ <div>Olen O</div> }></Route>
+        <Route path="avaleht" element={ <Avaleht /> }></Route>
+        <Route path="osta-kinkekaart" element={ <Kinkekaart /> }></Route>
+        <Route path="esindused" element={ <Esindused /> }></Route>
+        <Route path="arikliendile" element={ <Ariklient /> }></Route>
+        <Route path="ostukorv" element={ <Ostukorv /> }></Route>
+        <Route path="seaded" element={ <Seaded /> }></Route>
+        <Route path="lisa-toode" element={ <LisaToode /> }></Route>
       </Routes>
     </div>
   );
