@@ -29,7 +29,9 @@ function Avaleht() {
       <div>{sonum}</div>
       {kogus !== 0 && <button onClick={nulli}>Tagasi nulli</button>}
       <button onClick={vähenda}>-</button>
-      <span>{kogus}</span>
+      <span className={kogus >= 10 ? "kuldne" : null}>{kogus}</span>
+      {/*           if(kogus >= 10) {ON} else {KUI EI OLE} */}
+      {/* ternary operator -> lühendatud if/else */}
       <button onClick={suurenda}>+</button>
     </div>
   )
